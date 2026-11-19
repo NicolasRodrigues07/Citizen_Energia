@@ -6,7 +6,7 @@ INTEGRANTES (nome completo e RM):
 2. Lucas Caram Bueno - RM 570158
 
 LINK DO REPOSITORIO NO GITHUB:
-https://github.com/SEU-USUARIO/SEU-REPOSITORIO
+https://github.com/NicolasRodrigues07/Citizen_Energia/blob/main/entrega.txt
 
 LINK DO VIDEO NO YOUTUBE (nao listado):
 https://youtu.be/SEU-VIDEO
