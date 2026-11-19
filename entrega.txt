@@ -1,0 +1,12 @@
+GLOBAL SOLUTION 2026.2 - CITIZEN ASSIST AI
+Soluções em Energias Renováveis e Sustentáveis - Ciência da Computação (1CC)
+
+INTEGRANTES (nome completo e RM):
+1. Nicolas Andrade Rodrigues - RM 572782
+2. Lucas Caram Bueno - RM 570158
+
+LINK DO REPOSITORIO NO GITHUB:
+https://github.com/SEU-USUARIO/SEU-REPOSITORIO
+
+LINK DO VIDEO NO YOUTUBE (nao listado):
+https://youtu.be/SEU-VIDEO

@@ -1,0 +1,142 @@
+{
+  "_meta": {
+    "descricao": "Premissas e dados do modulo de Energia do Citizen Assist AI. Cada item informa valor, unidade, tipo (dado publico, dado de mercado ou estimado), fonte e observacao.",
+    "consulta_realizada_em": "2026-11-19",
+    "aviso": "Itens do tipo 'estimado' NAO sao dados oficiais: sao premissas justificadas. Confira tarifa, bandeira e precos antes de decidir."
+  },
+  "premissas": {
+    "tarifa_kwh": {
+      "valor": 1.0,
+      "unidade": "R$/kWh",
+      "tipo": "estimado",
+      "fonte": "Derivado de tarifa B1 residencial convencional da Enel SP com tributos (~R$ 0,93/kWh em faturas de mar-abr/2026, ICMS 18%) x reajuste residencial de 9,02% aprovado pela ANEEL em 30/06/2026 (vigencia 04/07/2026) = ~R$ 1,01; arredondado.",
+      "observacao": "Cada distribuidora tem tarifa propria. O usuario pode informar a tarifa da sua conta."
+    },
+    "pessoas": {
+      "valor": 4,
+      "unidade": "pessoas",
+      "tipo": "estimado",
+      "fonte": "Perfil-exemplo do projeto (familia de 3 a 5 pessoas).",
+      "observacao": "Alteravel pelo usuario."
+    },
+    "banhos_por_pessoa_dia": {
+      "valor": 1.0,
+      "unidade": "banhos/pessoa/dia",
+      "tipo": "estimado",
+      "fonte": "Premissa do projeto.",
+      "observacao": ""
+    },
+    "dias_mes": {
+      "valor": 30,
+      "unidade": "dias",
+      "tipo": "estimado",
+      "fonte": "Mes comercial.",
+      "observacao": ""
+    },
+    "potencia_w": {
+      "valor": 5500,
+      "unidade": "W",
+      "tipo": "dado de mercado",
+      "fonte": "Chuveiros residenciais comuns tem de 4.500 W a 7.800 W; 5.500 W e um modelo muito usado (guias do Procel e da imprensa especializada).",
+      "observacao": "Potencia na posicao 'inverno'. Ver referencias R4 e R5."
+    },
+    "minutos": {
+      "valor": 10,
+      "unidade": "min/banho",
+      "tipo": "estimado",
+      "fonte": "Pesquisa Procel/Eletrobras (2007): ~48,3% dos banhos quentes duram menos de 10 min; 10 min e usado como valor medio de referencia.",
+      "observacao": "Dado antigo; por isso o usuario pode informar o proprio tempo."
+    },
+    "A_minutos": {
+      "valor": 7,
+      "unidade": "min/banho",
+      "tipo": "estimado",
+      "fonte": "Meta de habito (reducao de 3 min). Cenario, nao medicao.",
+      "observacao": ""
+    },
+    "A_fator_potencia": {
+      "valor": 0.8,
+      "unidade": "fracao da potencia",
+      "tipo": "estimado",
+      "fonte": "Posicao 'verao/morno' usa ~80% da potencia de inverno (ex.: 4.400 W em um chuveiro de 5.500 W, referencia de guias de consumo).",
+      "observacao": "Depende do modelo do chuveiro."
+    },
+    "fracao_solar": {
+      "valor": 0.7,
+      "unidade": "fracao",
+      "tipo": "estimado",
+      "fonte": "Guias tecnicos citam que o aquecedor solar substitui de 70% a 80% da energia do aquecimento de agua; usamos o limite inferior (70%) por prudencia.",
+      "observacao": "Varia com clima, orientacao do telhado, dimensionamento e dias nublados; o resto vem do apoio eletrico."
+    },
+    "investimento_solar": {
+      "valor": 8000,
+      "unidade": "R$",
+      "tipo": "estimado",
+      "fonte": "Kits de 400 L com 2 coletores em lojas: ~R$ 4.600 a R$ 6.900 (equipamento) + instalacao R$ 1.500 a R$ 3.000; guia de 2026 cita faixa de R$ 7 mil a R$ 20 mil para sistema completo.",
+      "observacao": "Pedir ao menos 3 orcamentos. Analise de sensibilidade em docs/analise_alternativas.md."
+    },
+    "manutencao_solar_ano": {
+      "valor": 150,
+      "unidade": "R$/ano",
+      "tipo": "estimado",
+      "fonte": "Premissa: limpeza, inspecao e troca periodica do anodo (peca de R$ 80 a R$ 200).",
+      "observacao": ""
+    },
+    "vida_util_anos": {
+      "valor": 15,
+      "unidade": "anos",
+      "tipo": "estimado",
+      "fonte": "Premissa conservadora do projeto; confirmar garantia e vida util com o fabricante.",
+      "observacao": ""
+    },
+    "reajuste_tarifa_ano": {
+      "valor": 0.0,
+      "unidade": "fracao/ano",
+      "tipo": "estimado",
+      "fonte": "Cenario-base sem reajuste. Cenario alternativo de 5% a.a. (a ANEEL estimou alta media de tarifas acima da inflacao em 2026).",
+      "observacao": "Tarifa futura e incerta."
+    },
+    "fator_emissao_kg_kwh": {
+      "valor": 0.0385,
+      "unidade": "kgCO2/kWh",
+      "tipo": "dado publico",
+      "fonte": "MCTI: fator medio do SIN em 2023 = 38,5 kgCO2/MWh. Em 2025 os valores mensais ficaram entre ~21 e ~29 kg/MWh.",
+      "observacao": "A matriz eletrica brasileira e predominantemente renovavel; por isso o ganho em CO2 do chuveiro eletrico e pequeno."
+    },
+    "bandeira_vigente": {
+      "valor": "verde",
+      "unidade": "-",
+      "tipo": "dado publico",
+      "fonte": "ANEEL manteve a bandeira verde em novembro/2026 (sem cobranca extra).",
+      "observacao": "Muda todo mes."
+    },
+    "bandeira_amarela_100kwh": {
+      "valor": 1.885,
+      "unidade": "R$/100 kWh",
+      "tipo": "dado publico",
+      "fonte": "ANEEL (valores divulgados na imprensa em 2026).",
+      "observacao": ""
+    },
+    "bandeira_vermelha1_100kwh": {
+      "valor": 4.463,
+      "unidade": "R$/100 kWh",
+      "tipo": "dado publico",
+      "fonte": "ANEEL.",
+      "observacao": ""
+    },
+    "bandeira_vermelha2_100kwh": {
+      "valor": 7.877,
+      "unidade": "R$/100 kWh",
+      "tipo": "dado publico",
+      "fonte": "ANEEL.",
+      "observacao": ""
+    },
+    "participacao_chuveiro_procel": {
+      "valor": 0.24,
+      "unidade": "fracao",
+      "tipo": "dado publico",
+      "fonte": "Procel/Eletrobras (2007): chuveiro responde, em media, por ~24% do consumo residencial no pais.",
+      "observacao": "Dado antigo e medio nacional."
+    }
+  }
+}
